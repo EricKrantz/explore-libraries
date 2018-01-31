@@ -1,5 +1,5 @@
 #' ---
-#' output: github_document
+#' output: pdf_document
 #' ---
 
 
