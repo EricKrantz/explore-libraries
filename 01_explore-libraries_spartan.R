@@ -1,5 +1,5 @@
 #' Which libraries does R search for packages?
-
+library(tidyverse)
 mylibs <- .libPaths()
 
 #' Installed packages
