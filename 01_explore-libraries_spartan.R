@@ -5,6 +5,7 @@
 
 #' Which libraries does R search for packages?
 library(tidyverse)
+library(fs)
 mylibs <- .libPaths()
 
 #' Installed packages
@@ -49,7 +50,6 @@ table(pacs$Version)
 
 chunk1 <- .Library
 
-library(fs)
 chunk2 <- path_real(.Library)
 
 chunk1 == chunk2
