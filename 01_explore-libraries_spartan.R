@@ -5,6 +5,8 @@
 
 #' Which libraries does R search for packages?
 library(tidyverse)
+library(fs)
+
 mylibs <- .libPaths()
 
 #' Installed packages
@@ -47,12 +49,11 @@ table(pacs$Version)
 .Library
 .libPaths()
 
-chunk1 <- .Library
+path1 <- .Library
 
-library(fs)
-chunk2 <- path_real(.Library)
+path2 <- path_real(.Library)
 
-chunk1 == chunk2
+path1 == path2
 
 #' Going further
 
@@ -68,4 +69,4 @@ pacs %>%
 ## study package naming style (all lower case, contains '.', etc
 ## use `fields` argument to installed.packages() to get more info and use it!
 
-
+sessionInfo()
